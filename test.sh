@@ -1,19 +1,19 @@
 #!/usr/bin/env bash
 #
 # Run all go-iptables tests
-#   ./test
-#   ./test -v
+#   ./test.sh
+#   ./test.sh -v
 #
 # Run tests for one package
-#   PKG=./unit ./test
-#   PKG=ssh ./test
+#   PKG=./unit ./test.sh
+#   PKG=ssh ./test.sh
 #
 set -e
 
 # Invoke ./cover for HTML output
 COVER=${COVER:-"-cover"}
 
-source ./build
+source ./build.sh
 
 TESTABLE="iptables"
 FORMATTABLE="$TESTABLE"
